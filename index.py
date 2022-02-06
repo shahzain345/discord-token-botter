@@ -9,9 +9,10 @@ def genToken():
             botter = Botter(config["inv"], config["capKey"])
             botter.generateToken()
 threads = []
-for i in range(200):
-     t = threading.Thread(target=genToken, daemon=True)
+threadCount = int(input("Enter thread count: "))
+for i in range(threadCount):
+     t = threading.Thread(target=genToken)
      t.start()
      threads.append(t)
-for i in range(200):
+for i in range(threadCount):
     threads[i].join()
