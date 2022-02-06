@@ -1,4 +1,4 @@
 {
-    "captcha_key": "cap ",
-    "mail_key": "mail"
+    "capKey": "cap ",
+    "inv": "inv"
 }
