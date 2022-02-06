@@ -1,9 +1,12 @@
 import threading
 from botter import Botter
+import json
 # author shahzain, github.com/shahzain345
+with open('config.json') as fp:
+    config = json.load(fp)
 def genToken():
     while True:
-            botter = Botter("xTw8tUb9", "df4636c6450c100e9d8f75f439833cba")
+            botter = Botter(config["inv"], config["capKey"])
             botter.generateToken()
 threads = []
 for i in range(200):
