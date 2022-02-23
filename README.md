@@ -7,3 +7,8 @@ Fill in your info in config.json and run the python file and thats it
 Join our guilded server for support https://www.guilded.gg/i/EAJz3WY2
 ## Hall of skids
 Terminal#1339 - https://discord.gg/gkNHdCkCAd
+## Requirements
+httpx
+colorama
+pyfiglet
+pip install httpx colorama pyfiglet
