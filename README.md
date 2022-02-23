@@ -11,4 +11,5 @@ Terminal#1339 - https://discord.gg/gkNHdCkCAd
 httpx
 colorama
 pyfiglet
+<br />
 pip install httpx colorama pyfiglet
