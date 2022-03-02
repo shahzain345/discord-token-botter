@@ -9,6 +9,11 @@ with open('config.json') as fp:
     config = json.load(fp)
 def genToken(inv):
     while True:
+        try:
+            botter = Botter(inv, config["capKey"])
+            botter.generateToken()
+        except Exception as e:
+            print(e)
             botter = Botter(inv, config["capKey"])
             botter.generateToken()
 os.system('cls')
