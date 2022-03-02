@@ -41,7 +41,6 @@ class Botter:
                         print(f"{Fore.GREEN}{Style.BRIGHT}[>] Got Captcha {solvedCaptcha[0:60]}{Style.RESET_ALL}")
                         return solvedCaptcha
     def generateToken(self):
-        try:
             payload = {
                 "fingerprint": self.session.headers["X-Fingerprint"],
                 "username": "GetThisToolOnGithub",
@@ -61,5 +60,3 @@ class Botter:
                 print(f'{Style.BRIGHT}{Fore.GREEN}[>] Generated token - GetThisToolOnGithub || {req.json()["token"][0:31]}{Style.RESET_ALL}')
                 with open('tokens.txt', 'a') as fp:
                     fp.write(req.json()["token"] + "\n")
-        except:
-            self.generateToken()
