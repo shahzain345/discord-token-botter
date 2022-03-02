@@ -13,7 +13,6 @@ def genToken(inv):
             botter = Botter(inv, config["capKey"])
             botter.generateToken()
         except Exception as e:
-            print(e)
             botter = Botter(inv, config["capKey"])
             botter.generateToken()
 os.system('cls')
