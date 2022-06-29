@@ -1,0 +1,13 @@
+{
+    "username": {
+        "use_username_from_file": false,
+        "username_prefix": "Shahzain"
+    },
+    "proxy": {
+        "proxyless": false
+    },
+    "captcha": {
+        "api": "2captcha.com",
+        "key": "Your captcha key"
+    }
+}
