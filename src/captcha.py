@@ -15,6 +15,12 @@ class Captcha:
         if self.api == "2captcha.com":
             captcha = twocaptcha.TwoCaptcha(self.key)
             return captcha.balance()
+        elif self.api == "anti-captcha.com" or self.api == "capmonster.cloud":
+            resp = self._client.post(f"https://api.{self.api}/getBalance", json={ "clientKey":self.key }).json()
+            if resp.get("errorId") > 0:
+                console.f_print(f"Error while getting captcha balance: {resp.get('errorDescription')}")
+                return 0.0
+            return resp.get("balance")
 
     def getCaptcha(self):
         if self.api == "2captcha.com":
@@ -24,6 +30,7 @@ class Captcha:
             console.s_print(f"Got hCaptcha: {token[:32]}")
             return token
         elif self.api == "anti-captcha.com" or self.api == "capmonster.cloud":
+            solvedCaptcha = None
             taskId = self._client.post(f"https://api.{self.api}/createTask", json={"clientKey": self.key, "task": {"type": "HCaptchaTaskProxyless", "websiteURL": "https://discord.com/",
                                                                                                                    "websiteKey": "4c672d35-0701-42b2-88c3-78380b0db560", "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"}}, timeout=30).json()
             if taskId.get("errorId") > 0:
