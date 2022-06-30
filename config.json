@@ -7,7 +7,7 @@
         "proxyless": false
     },
     "captcha": {
-        "api": "2captcha.com",
-        "key": "Your captcha key"
+        "api": "anti-captcha.com",
+        "key": "YOUR CAPTCHA KEY"
     }
 }

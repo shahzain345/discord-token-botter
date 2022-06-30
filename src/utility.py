@@ -16,10 +16,8 @@ class Utility:
     def getUsername(self) -> str:
         if self.config.get("username").get("use_username_from_file"):
             return random.choice(open('input/usernames.txt').readlines())
-        return f"{self.config.get('username').get('username_prefix')} |" + "".join(random.choice(string.ascii_letters + string.digits) for _ in range(4))
+        return f"{self.config.get('username').get('username_prefix')} | " + "".join(random.choice(string.ascii_letters + string.digits) for _ in range(4))
 class MPrint:
-    def __init__(self):
-        """"""
     def w_print(self, message: str):
         """Print warning"""
         print(f"[{Style.BRIGHT}{Fore.RED}?{Style.RESET_ALL}] {Style.BRIGHT}{Fore.YELLOW}{message}{Style.RESET_ALL}")

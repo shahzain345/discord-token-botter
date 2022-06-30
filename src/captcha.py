@@ -16,7 +16,7 @@ class Captcha:
             captcha = twocaptcha.TwoCaptcha(self.key)
             return captcha.balance()
         elif self.api == "anti-captcha.com" or self.api == "capmonster.cloud":
-            resp = self._client.post(f"https://api.{self.api}/getBalance", json={ "clientKey":self.key }).json()
+            resp = self._client.post(f"https://api.{self.api}/getBalance", json={"clientKey": self.key}).json()
             if resp.get("errorId") > 0:
                 console.f_print(f"Error while getting captcha balance: {resp.get('errorDescription')}")
                 return 0.0
