@@ -1,4 +1,4 @@
-# All required modules.
+# Importing shit
 import httpx
 import os
 import json as jsonlib
@@ -38,7 +38,7 @@ class Botter(httpx.Client):
         self.headers["Origin"] = "https://discord.com"
     def __build_trackers(self):
         return b64encode(jsonlib.dumps({"os":"Windows","browser":"Firefox","device":"","system_locale":"en-US","browser_user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0","browser_version":"103.0","os_version":"10","referrer":"","referring_domain":"","referrer_current":"","referring_domain_current":"","release_channel":"stable","client_build_number":133852,"client_event_source":None}, separators=(',', ':')).encode()).decode()
-    def _make_account(self, payload: dict, captcha: Union[str, None] = None):
+    def _make_account(self, payload: dict, captcha: Union[str, None] = None) -> dict:
         if captcha != None:
             payload["captcha_key"] = captcha
         return self.post("https://discord.com/api/v9/auth/register", json=payload).json()
@@ -54,7 +54,7 @@ class Botter(httpx.Client):
                 res = self._make_account(payload, self.captcha.getCaptcha())
             if "token" in res:
                 success+=1
-                console.s_print(f"Generated {res.get('token')} | {payload.get('username')}")
+                console.s_print(f"Generated {res.get('token')} || {payload.get('username')}")
                 return res.get("token")
             if "token" not in res:
                 console.f_print(f"Failed token not in variable 'res': {res}")

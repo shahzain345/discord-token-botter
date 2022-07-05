@@ -8,6 +8,7 @@
     },
     "captcha": {
         "api": "anti-captcha.com",
-        "key": "YOUR CAPTCHA KEY"
+        "key": "YOUR CAPTCHA KEY",
+        "send_proxy": true
     }
 }

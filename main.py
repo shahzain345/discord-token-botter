@@ -1,9 +1,10 @@
 from concurrent.futures import ThreadPoolExecutor
-from src import Botter, utility
+from src import Botter, utility, captcha
 from colorama import Fore,Style
-from traceback import format_exc
 import os
+utils = utility.Utility()
 console = utility.MPrint()
+captcha = captcha.Captcha()
 def main(rawInvite: str):
     while True:
         try:
@@ -25,6 +26,7 @@ if __name__ == "__main__":
 ███████║██║  ██║██║  ██║██║  ██║███████╗██║  ██║██║██║ ╚████║    ██████╔╝╚██████╔╝   ██║      ██║   ███████╗██║  ██║
 ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝    ╚═════╝  ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
     """.replace("█", f"{Fore.BLUE}{Style.BRIGHT}█{Style.RESET_ALL}"))
+    console.s_print(f"Total Proxies: {len(open('input/proxies.txt').readlines())} || Captcha Balance: ${captcha.getBalance()}")
     threadCount = int(input(f"[{Style.BRIGHT}{Fore.MAGENTA}+{Style.RESET_ALL}] {Style.BRIGHT}Enter your thread count: {Style.RESET_ALL}"))
     rawInvite = input(f"[{Style.BRIGHT}{Fore.MAGENTA}+{Style.RESET_ALL}] {Style.BRIGHT}Enter your invite(without discord.gg/): {Style.RESET_ALL}")
     with ThreadPoolExecutor(max_workers=threadCount) as executor:
