@@ -14,6 +14,10 @@ After this simply run the <strong>main.py</strong> file.
 
 `python main.py` or `py main.py` or `python3 main.py`
 
+# Need help?
+
+Join our guilded server and I'll be more then happy to help:  [Click Me 😄](https://www.guilded.gg/i/2Zv9o7L2)
+
 And enjoy!
 
 # Note:
