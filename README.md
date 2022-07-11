@@ -23,3 +23,6 @@ And enjoy!
 # Note:
 
 If you find anyone selling this tool, please contact me on discord immediately: Shahzain#2720
+# Hall of skids:
+
+wtf.ÀlPHÁ#6969 - Selling this gen for $50
