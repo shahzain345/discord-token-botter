@@ -1,4 +1,6 @@
-# Shahzain Botter V2
+# Shahzain Botter V2 - If you were sold this tool, you have been scammed, this tool is free & open source
+
+Please DO NOT pay money for this tool
 
 A discord account creator that creates discord tokens and adds them to a server.
 
