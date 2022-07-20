@@ -7,6 +7,11 @@ A discord account creator that creates discord tokens and adds them to a server.
 Please also note that this tool DOES NOT generate Unlocked Tokens.
 
 Selling this tool is prohibited!
+
+# Want to buy a good generator? that generates unlocked tokens:
+
+https://shahzaintokens.sellix.io/
+
 # Usage:
 First fill in the config.json file and add your captcha api key and captcha api init
 
