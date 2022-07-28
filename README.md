@@ -35,3 +35,4 @@ If you find anyone selling this tool, please contact me on discord immediately: 
 # Hall of skids:
 
 wtf.ÀlPHÁ#6969 - Selling this gen for $50
+! THUNDER#2006 - Selling this gen for $1 lol 😄
