@@ -36,4 +36,4 @@ If you find anyone selling this tool, please contact me on discord immediately: 
 
 wtf.ÀlPHÁ#6969 - Selling this gen for $50
 
-! 🎃#1111 - Selling this gen for $1 lol 😄
+ExE#1111 - Selling this gen for $1 lol 😄
