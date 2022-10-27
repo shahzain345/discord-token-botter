@@ -1,4 +1,4 @@
-# Shahzain Botter V2 - If you were sold this tool, you have been scammed, this tool is free & open source
+# Shahzain Botter V2 - Patched
 
 Please DO NOT pay money for this tool
 
